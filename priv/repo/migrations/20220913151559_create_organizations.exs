@@ -1,0 +1,15 @@
+defmodule MultiStepForm.Repo.Migrations.CreateOrganizations do
+  use Ecto.Migration
+
+  def change do
+    create table(:organizations) do
+      add :name, :string
+      add :document, :string
+
+      add :address, :map
+      add :contact, :map
+
+      timestamps()
+    end
+  end
+end
